@@ -22,3 +22,46 @@
 // let inven = sss.name
 // console.log(inven)
 // }
+
+// ЗАДАЧА 2: Обновление инвентаря Напишите функцию updateInventory(productId, amount), которая обновляет количество определенного ID товара. Количество может быть положительной (добавление к инвентарю) или отрицательной (вычитание из инвентаря). Убедитесь, что функция не позволяет инвентарю опуститься ниже 0.
+
+// Вариант решения 1
+
+// function updateInventory(productId, amount) {
+// let product = inventory.find((i) => i.id === productId)
+
+// if (!product) {
+//   console.log("Такого товара нет")
+//   return
+// }
+
+// let name = product.name
+// let newQuantity = product.quantity + amount
+// product.quantity += amount
+
+//  if (newQuantity < 0) {
+//    console.log("Число товара не может быть отрицательным")
+//  }
+//   else { console.log (`Число товара ${name} стало ${product.quantity}`)
+//   }
+// }
+// updateInventory(2, -10)
+// console.log(inventory)
+
+// Вариант решения 2
+
+// function updateInventory(productId, amount) {
+//   let product = inventory.find(item => item.id === productId)
+
+//   if (product) {
+//   product.quantity += Math.max(0, product.quantity + amount)
+//     console.log(`Товара с ID ${productId} стало ${product.quantity}`)
+//   }
+//   else {
+
+//     console.log(`Товара с ID ${productId} нет в инвентаре`)
+//   }
+// }
+
+// updateInventory(2, 1000)
+// console.log(inventory)
