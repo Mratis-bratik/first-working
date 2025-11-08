@@ -65,3 +65,63 @@
 
 // updateInventory(2, 1000)
 // console.log(inventory)
+// ЗАДАНИЕ 3
+
+// Вариант 1
+
+// function findLowStock(threshold) {
+//   return inventory
+//   .filter(item => item.quantity < threshold)
+//   .map(i => i.name)
+// }
+// console.log(findLowStock(200))
+
+// Вариант решения 2
+
+// function findLowStock(threshold) {
+//   let result = inventory
+//   .filter((item) => {
+//     return item.quantity < threshold
+//   })
+//   .map((i) => {
+//     return i.name
+//   })
+//   return result
+// }
+
+// console.log(findLowStock(100))
+
+//Задание 3.2
+
+// let inventory = {
+//     Apple: 200,
+//     Banana: 150,
+//     Cherry: 50
+// }
+// Вариант решения 1
+
+// function  findLowStock(threshold) {
+//   let keysAboveThresh = []
+//   let keysBelowThresh = []
+// for(let [key, value] of Object.entries(inventory)) {
+//   if(value < threshold) {
+//    keysAboveThresh.push(key)
+//     console.log(`Товары с количеством ниже ${threshold}: ${keysAboveThresh}`)
+//   }
+//   else {
+//   keysBelowThresh.push(key)
+//     console.log(`Товары количество которых больше ${threshold}: ${keysBelowThresh}`)
+//   }
+// }
+// }
+// findLowStock(500)
+
+// Вариант решения 2
+
+// function  findLowStock(threshold) {
+//   let low = Object.entries(inventory)
+//   .filter(([key, value]) => value < threshold)
+//   .map(([key, value]) => key)
+// console.log(low)
+// }
+// findLowStock(400)
