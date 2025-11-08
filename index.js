@@ -22,3 +22,12 @@
 // let inven = sss.name
 // console.log(inven)
 // }
+//ЗАДАНИЕ 4
+//ВАРИАНТ РЕШЕНИЯ 1
+
+// function totalInventoryValue() {
+//   return inventory.reduce((x, y) => {
+//     return x + (y.price * y.quantity)
+//   }, 0)
+// }
+// console.log(totalInventoryValue())
